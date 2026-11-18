@@ -61,6 +61,18 @@ export const servicesData: ServiceItem[] = [
     featured: true
   },
   {
+    id: 'math-hero',
+    name: 'Math Hero',
+    description: 'Koleksi game matematika seru untuk mengasah kemampuan berhitung seluruh keluarga. Tersedia 4 level tantangan yang bisa langsung dimainkan di browser.',
+    url: '/math-hero',
+    subdomain: 'kubiko.my.id/math-hero',
+    category: 'game',
+    icon: 'Calculator',
+    tag: 'Game Edukasi',
+    specs: ['4 Level Permainan', 'Optimal di HP', 'Main di Browser'],
+    featured: true
+  },
+  {
     id: 'game-hub',
     name: 'Zona Game Santai',
     description: 'Kumpulan game santai ringan yang bisa langsung dimainkan bersama lewat peramban web.',
@@ -81,6 +93,7 @@ export const caddyProxyChain: ServiceRoute[] = [
   { from: 'files.kubiko.my.id', target: 'Penyimpanan Berkas & Foto', note: 'Aman' },
   { from: 'pdf.kubiko.my.id', target: 'Alat Pengolah PDF', note: 'Praktis' },
   { from: 'crafty.kubiko.my.id', target: 'Server Game Minecraft', note: 'Survival' },
+  { from: 'kubiko.my.id/math-hero', target: 'Math Hero (Game Edukasi)', note: '4 Level' },
   { from: 'game.kubiko.my.id', target: 'Zona Game Santai', note: 'Di Browser' },
 ];
 

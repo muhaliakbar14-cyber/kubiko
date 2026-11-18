@@ -1,5 +1,5 @@
 ---
-import { Film, FileText, Gamepad2, Dices, HardDrive, Activity, Copy, ArrowUpRight, Sparkles } from 'lucide-astro';
+import { Film, FileText, Gamepad2, Dices, HardDrive, Calculator, Activity, Copy, ArrowUpRight, Sparkles } from 'lucide-astro';
 import type { ServiceItem } from '../types/service';
 
 interface Props {
@@ -25,7 +25,8 @@ const { service } = Astro.props;
         {service.icon === 'Gamepad2' && <Gamepad2 class="w-7 h-7 sm:w-8 sm:h-8" />}
         {service.icon === 'Dices' && <Dices class="w-7 h-7 sm:w-8 sm:h-8" />}
         {service.icon === 'HardDrive' && <HardDrive class="w-7 h-7 sm:w-8 sm:h-8" />}
-        {!['Film', 'FileText', 'Gamepad2', 'Dices', 'HardDrive'].includes(service.icon) && <Activity class="w-7 h-7 sm:w-8 sm:h-8" />}
+        {service.icon === 'Calculator' && <Calculator class="w-7 h-7 sm:w-8 sm:h-8" />}
+        {!['Film', 'FileText', 'Gamepad2', 'Dices', 'HardDrive', 'Calculator'].includes(service.icon) && <Activity class="w-7 h-7 sm:w-8 sm:h-8" />}
       </div>
 
       <div class="flex flex-col items-end gap-1.5">
